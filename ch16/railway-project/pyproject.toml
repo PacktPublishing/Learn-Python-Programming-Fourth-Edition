@@ -1,0 +1,72 @@
+# railway-project/pyproject.toml
+[build-system]
+requires = ["setuptools>=66.1.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "railway-cli"
+authors = [
+  {name="Heinrich Kruger", email="heinrich@example.com"},
+  {name="Fabrizio Romano", email="fabrizio@example.com"},
+]
+
+description = "A CLI client for the railway API"
+readme = "README.md"
+
+license = {file = "LICENSE"}
+
+classifiers = [
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+keywords = ["packaging example", "CLI"]
+
+dynamic = ["version"]
+
+dependencies = [
+    "pydantic[email]>=2.8.2,<3.0.0",
+    "pydantic-settings~=2.4.0",
+    "requests~=2.0",
+]
+requires-python = ">=3.10"
+
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "flake8",
+    "mypy",
+    "types-requests",
+    "pytest",
+    "pytest-mock",
+    "requests-mock",
+]
+
+[project.urls]
+Homepage = "https://github.com/PacktPublishing/Learn-Python-Programming-Fourth-Edition"
+"Learn Python Programming Book" = "https://www.packtpub.com/en-us/product/learn-python-programming-9781835882948"
+
+[project.scripts]
+railway-cli = "railway_cli.cli:main"
+
+[tool.setuptools.dynamic]
+version = {"attr" = "railway_cli.__version__"}
+
+[tool.black]
+line-length = 66
+
+[tool.isort]
+profile = 'black'
+line_length = 66
+
+[tool.mypy]
+strict = true
+plugins = ["pydantic.mypy"]

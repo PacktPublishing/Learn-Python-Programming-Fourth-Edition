@@ -1,0 +1,12 @@
+$ http POST http://localhost:8000/users/authenticate \
+email="fabrizio.romano@example.com" password="f4bPassword"
+HTTP/1.1 200 OK
+content-length: 201
+content-type: application/json
+date: Fri, 20 Aug 2021 21:51:13 GMT
+server: uvicorn
+
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTIyMjQzNjEsImV4cCI6MTcxMjMxMDc2MSwiZW1haWwiOiJmYWJyaXppby5yb21hbm9AZXhhbXBsZS5jb20iLCJyb2xlIjoiYWRtaW4ifQ.4UiWgy5pqr85kR7ypB_L_01GK4QyzZje8NKMzBBVckc"
+
+---
+

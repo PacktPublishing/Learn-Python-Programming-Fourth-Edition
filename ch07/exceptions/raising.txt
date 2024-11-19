@@ -1,0 +1,5 @@
+# exceptions/raising.txt
+>>> raise NotImplementedError("I'm afraid I can't do that")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NotImplementedError: I'm afraid I can't do that

@@ -1,0 +1,30 @@
+# exceptions/groups/exc.group.txt
+>>> from util import validate_ages
+>>> validate_ages([24, -5, "ninety", 30, None])
+  + Exception Group Traceback (most recent call last):
+  |   File "<stdin>", line 1, in <module>
+  |   File "exceptions/groups/util.py", line 20, in validate_ages
+  |     raise ExceptionGroup("Validation errors", errors)
+  | ExceptionGroup: Validation errors (3 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "exceptions/groups/util.py", line 15, in validate_ages
+    |     validate_age(age)
+    |   File "exceptions/groups/util.py", line 8, in validate_age
+    |     raise ValueError(f"Negative age: {age}")
+    | ValueError: Negative age: -5
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "exceptions/groups/util.py", line 15, in validate_ages
+    |     validate_age(age)
+    |   File "exceptions/groups/util.py", line 6, in validate_age
+    |     raise TypeError(f"Not an integer: {age}")
+    | TypeError: Not an integer: ninety
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "exceptions/groups/util.py", line 15, in validate_ages
+    |     validate_age(age)
+    |   File "exceptions/groups/util.py", line 6, in validate_age
+    |     raise TypeError(f"Not an integer: {age}")
+    | TypeError: Not an integer: None
+    +------------------------------------

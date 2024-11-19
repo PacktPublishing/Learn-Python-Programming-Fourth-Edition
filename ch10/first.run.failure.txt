@@ -1,0 +1,30 @@
+$ pytest tests -vv
+===================== test session starts =====================
+platform darwin -- Python 3.12.2, pytest-8.1.1, pluggy-1.4.0 --
+/Users/fab/.virtualenvs/lpp4ed-ch10/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/fab/code/lpp4ed
+configfile: pyproject.toml
+collected 2 items
+
+tests/test_api.py::TestIsValid::test_minimal FAILED     [ 50%]
+tests/test_api.py::TestIsValid::test_full PASSED        [100%]
+
+=========================== FAILURES ==========================
+___________________ TestIsValid.test_minimal __________________
+
+self = <ch10.tests.test_api.TestIsValid object at 0x103603920>,
+       min_user = {'age': 18, 'email': 'minimal@example.com'}
+
+    def test_minimal(self, min_user):
+>       assert is_valid(min_user)
+E       AssertionError: assert False
+E        +  where False = is_valid(
+                {'age': 18, 'email': 'minimal@example.com'}
+            )
+
+tests/test_api.py:45: AssertionError
+=================== short test summary info ===================
+FAILED tests/test_api.py::TestIsValid::test_minimal
+       - AssertionError: assert False
+================= 1 failed, 1 passed in 0.04s =================

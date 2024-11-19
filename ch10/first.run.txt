@@ -1,0 +1,13 @@
+$ pytest tests -vv
+===================== test session starts =====================
+platform darwin -- Python 3.12.2, pytest-8.1.1, pluggy-1.4.0 --
+  /Users/fab/.virtualenvs/lpp4ed-ch10/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/fab/code/lpp4ed
+configfile: pyproject.toml
+collected 2 items
+
+tests/test_api.py::TestIsValid::test_minimal PASSED      [ 50%]
+tests/test_api.py::TestIsValid::test_full PASSED         [100%]
+
+====================== 2 passed in 0.03s ======================
