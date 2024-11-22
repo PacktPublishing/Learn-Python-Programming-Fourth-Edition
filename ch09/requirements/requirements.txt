@@ -6,7 +6,7 @@
 #
 cffi==1.16.0
     # via cryptography
-cryptography==42.0.7
+cryptography==43.0.1
     # via -r requirements.in
 pycparser==2.22
     # via cffi
