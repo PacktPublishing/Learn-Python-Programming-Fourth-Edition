@@ -8,6 +8,8 @@ certifi==2024.2.2
     # via requests
 charset-normalizer==3.3.2
     # via requests
+greenlet==3.1.1
+    # via sqlalchemy
 idna==3.6
     # via requests
 requests==2.31.0
@@ -16,5 +18,5 @@ sqlalchemy==2.0.29
     # via -r requirements.in
 typing-extensions==4.10.0
     # via sqlalchemy
-urllib3==2.2.1
+urllib3==2.2.2
     # via requests
