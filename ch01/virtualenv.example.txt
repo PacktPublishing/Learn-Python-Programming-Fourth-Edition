@@ -1,0 +1,18 @@
+fab@m1:~/code$ mkdir my-project
+fab@m1:~/code$ cd my-project
+fab@m1:~/code/my-project$ python3.12 -m venv lpp4ed
+fab@m1:~/code/my-project$ source ./lpp4ed/bin/activate
+(lpp4ed) fab@m1:~/code/my-project$ cat requirements.txt
+django==5.0.3
+requests==2.31.0
+# the following instruction shows how to use pip to install
+# requirements from a file
+(lpp4ed) fab@m1:~/code/my-project$ pip install -r requirements.txt
+Collecting django==5.0.3 (from -r requirements.txt (line 1))
+  Using cached Django-5.0.3-py3-none-any.whl.metadata (4.2 kB)
+Collecting requests==2.31.0 (from -r requirements.txt (line 2))
+  Using cached requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+  ... more collecting omitted ...
+Installing collected packages: ..., requests, django
+Successfully installed ... django-5.0.3 requests-2.31.0
+(lpp4ed) fab@m1:~/code/my-project$

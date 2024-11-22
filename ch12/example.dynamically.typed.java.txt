@@ -1,0 +1,3 @@
+# example.dynamically.typed.java.txt
+String name = "John Doe";
+int age = 60;

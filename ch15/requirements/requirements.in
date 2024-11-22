@@ -1,0 +1,3 @@
+pydantic[email]
+pydantic-settings
+requests

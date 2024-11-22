@@ -1,0 +1,148 @@
+
+# imports
+>>> from datetime import date, datetime, timedelta, timezone, UTC
+>>> import time
+>>> import calendar as cal
+>>> from zoneinfo import ZoneInfo
+
+
+# date
+>>> today = date.today()
+>>> today
+datetime.date(2024, 3, 19)
+>>> today.ctime()
+'Tue Mar 19 00:00:00 2024'
+>>> today.isoformat()
+'2024-03-19'
+>>> today.weekday()
+1
+>>> cal.day_name[today.weekday()]
+'Tuesday'
+>>> today.day, today.month, today.year
+(19, 3, 2024)
+>>> today.timetuple()
+time.struct_time(
+    tm_year=2024, tm_mon=3, tm_mday=19,
+    tm_hour=0, tm_min=0, tm_sec=0,
+    tm_wday=1, tm_yday=79, tm_isdst=-1
+)
+
+# time
+>>> time.ctime()
+'Tue Mar 19 21:15:23 2024'
+>>> time.daylight
+1
+>>> time.gmtime()
+time.struct_time(
+    tm_year=2024, tm_mon=3, tm_mday=19,
+    tm_hour=21, tm_min=15, tm_sec=53,
+    tm_wday=1, tm_yday=79, tm_isdst=0
+)
+>>> time.gmtime(0)
+time.struct_time(
+    tm_year=1970, tm_mon=1, tm_mday=1,
+    tm_hour=0, tm_min=0, tm_sec=0,
+    tm_wday=3, tm_yday=1, tm_isdst=0
+)
+>>> time.localtime()
+time.struct_time(
+    tm_year=2024, tm_mon=3, tm_mday=19,
+    tm_hour=21, tm_min=16, tm_sec=6,
+    tm_wday=1, tm_yday=79, tm_isdst=0
+)
+>>> time.time()
+1710882970.789991
+
+
+# datetime, timezones and tiemdeltas
+>>> now = datetime.now()
+>>> utcnow = datetime.now(UTC)
+
+>>> now
+datetime.datetime(2024, 3, 19, 21, 16, 56, 931429)
+>>> utcnow
+datetime.datetime(
+    2024, 3, 19, 21, 17, 53, 241072,
+    tzinfo=datetime.timezone.utc
+)
+>>> now.date()
+datetime.date(2024, 3, 19)
+>>> now.day, now.month, now.year
+(19, 3, 2024)
+>>> now.date() == date.today()
+True
+>>> now.time()
+datetime.time(21, 16, 56, 931429)
+>>> now.hour, now.minute, now.second, now.microsecond
+(21, 16, 56, 931429)
+>>> now.ctime()
+'Tue Mar 19 21:16:56 2024'
+>>> now.isoformat()
+'2024-03-19T21:16:56.931429'
+>>> now.timetuple()
+time.struct_time(
+    tm_year=2024, tm_mon=3, tm_mday=19,
+    tm_hour=21, tm_min=16, tm_sec=56,
+    tm_wday=1, tm_yday=79, tm_isdst=-1
+)
+>>> now.tzinfo
+>>> utcnow.tzinfo
+datetime.timezone.utc
+>>> now.weekday()
+1
+>>> f_bday = datetime(
+    1975, 12, 29, 12, 50, tzinfo=ZoneInfo('Europe/Rome')
+)
+>>> h_bday = datetime(
+    1981, 10, 7, 15, 30, 50, tzinfo=timezone(timedelta(hours=2))
+)
+>>> diff = h_bday - f_bday
+>>> type(diff)
+<class 'datetime.timedelta'>
+>>> diff.days
+2109
+>>> diff.total_seconds()
+182223650.0
+>>> today + timedelta(days=49)
+datetime.date(2024, 5, 7)
+>>> now + timedelta(weeks=7)
+datetime.datetime(2024, 5, 7, 21, 16, 56, 931429)
+
+
+# parsing (stdlib)
+>>> datetime.fromisoformat('1977-11-24T19:30:13+01:00')
+datetime.datetime(
+    1977, 11, 24, 19, 30, 13,
+    tzinfo=datetime.timezone(datetime.timedelta(seconds=3600))
+)
+
+>>> datetime.fromtimestamp(time.time())
+datetime.datetime(2024, 3, 19, 21, 26, 56, 785166)
+
+>>> datetime.now()
+datetime.datetime(2024, 3, 19, 21, 27, 8, 281756)
+
+
+# arrow small demo
+>>> import arrow
+>>> arrow.utcnow()
+<Arrow [2024-03-19T21:29:15.076737+00:00]>
+>>> arrow.now()
+<Arrow [2024-03-19T21:29:26.354786+00:00]>
+
+>>> local = arrow.now("Europe/Rome")
+>>> local
+<Arrow [2024-03-19T22:29:40.282730+01:00]>
+>>> local.to("utc")
+<Arrow [2024-03-19T21:29:40.282730+00:00]>
+>>> local.to("Europe/Moscow")
+<Arrow [2024-03-20T00:29:40.282730+03:00]>
+>>> local.to("Asia/Tokyo")
+<Arrow [2024-03-20T06:29:40.282730+09:00]>
+>>> local.datetime
+datetime.datetime(
+    2024, 3, 19, 22, 29, 40, 282730,
+    tzinfo=tzfile('/usr/share/zoneinfo/Europe/Rome')
+)
+>>> local.isoformat()
+'2024-03-19T22:29:40.282730+01:00'

@@ -1,0 +1,10 @@
+-c requirements.txt
+
+black
+flake8
+isort
+mypy
+pytest
+pytest-mock
+requests-mock
+types-requests

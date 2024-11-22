@@ -1,0 +1,21 @@
+# Test with:
+# $ python -m doctest -v config-ini.txt
+
+>>> import configparser
+>>> config = configparser.ConfigParser()
+>>> config.read("config.ini")
+['config.ini']
+>>> config.sections()
+['owner', 'database', 'database.primary', 'database.secondary']
+>>> config.items("database")
+[('title', 'Config INI example'), ('host', '192.168.1.255'), ('user', 'redis'), ('password', 'redis-password'), ('db_range', '[0, 32]')]
+>>> config["database"]
+<Section: database>
+>>> dict(config["database"])
+{'host': '192.168.1.255', 'user': 'redis', 'password': 'redis-password', 'db_range': '[0, 32]', 'title': 'Config INI example'}
+>>> config["DEFAULT"]["host"]
+'192.168.1.1'
+>>> dict(config["database.secondary"])
+{'port': '6380', 'connection_max': '4000', 'title': 'Config INI example', 'host': '192.168.1.1'}
+>>> config.getint("database.primary", "port")
+6379

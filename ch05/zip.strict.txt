@@ -1,0 +1,10 @@
+# zip.strict.txt
+
+>>> students = ["Sophie", "Alex", "Charlie", "Alice"]
+>>> grades = ["A", "C", "B"]
+>>> dict(zip(students, grades))
+{'Sophie': 'A', 'Alex': 'C', 'Charlie': 'B'}
+>>> dict(zip(students, grades, strict=True))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: zip() argument 2 is shorter than argument 1

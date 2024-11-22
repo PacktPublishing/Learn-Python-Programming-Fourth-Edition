@@ -1,0 +1,70 @@
+macOS:
+
+
+fab@m1:~/code$ mkdir my-project  # step 1
+fab@m1:~/code$ cd my-project
+
+fab@m1:~/code/my-project$ which python3.12  # check system python
+/usr/bin/python3.12  # <-- system python3.12
+
+fab@m1:~/code/my-project$ python3.12 -m venv lpp4ed  # step 2
+fab@m1:~/code/my-project$ source ./lpp4ed/bin/activate  # step 3
+
+# check python again: now using the virtual environment's one
+(lpp4ed) fab@m1:~/code/my-project$ which python
+/Users/fab/code/my-project/lpp4ed/bin/python
+
+(lpp4ed) fab@m1:~/code/my-project$ python  # step 4
+Python 3.12.2 (main, Feb 14 2024, 14:16:36)
+→ [Clang 15.0.0 (clang-1500.1.0.2.5)] on darwin
+Type "help", "copyright", "credits" or "license" for more
+→ information.
+>>> exit()
+
+(lpp4ed) fab@m1:~/code/my-project$ deactivate  # step 5
+fab@m1:~/code/my-project$
+
+
+----------------------------------------------------------------------------------------
+
+Windows 11
+Simply install from python website, then from terminal:
+
+PS C:\Users\H\Code> mkdir my-project  # step 1
+
+
+    Directory: C:\Users\H\Code
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         3/15/2024   3:50 PM                my-project
+
+
+PS C:\Users\H\Code> cd .\my-project\
+
+# check installed python versions
+PS C:\Users\H\Code\my-project> py --list-paths
+ -V:3.12 *
+→ C:\Users\H\AppData\Local\Programs\Python\Python312\python.exe
+
+
+PS C:\Users\H\Code\my-project> py -3.12 -m venv lpp4ed  # step 2
+PS C:\Users\H\Code\my-project> .\lpp4ed\Scripts\activate  # step 3
+
+# check python versions again: now using the virtual environment's
+(lpp4ed) PS C:\Users\H\Code\my-project> py --list-paths
+  *
+→ C:\Users\H\Code\my-project\lpp4ed\Scripts\python.exe
+ -V:3.12
+→ C:\Users\H\AppData\Local\Programs\Python\Python312\python.exe
+
+(lpp4ed) PS C:\Users\H\Code\my-project> python  # step 4
+Python 3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36)
+→ [MSC v.1937 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more
+→ information.
+>>> exit()
+
+(lpp4ed) PS C:\Users\H\Code\my-project> deactivate  # step 5
+PS C:\Users\H\Code\my-project>

@@ -1,0 +1,35 @@
+>>> import tomllib
+>>> with open("config.toml", "rb") as f:
+...     config = tomllib.load(f)
+...
+>>> config
+{
+    'title': 'Config Example',
+    'owner': {
+        'name': 'Fabrizio Romano',
+        'dob': datetime.datetime(
+            1975, 12, 29, 11, 50, tzinfo=datetime.timezone.utc
+        )
+    },
+    'database': {
+        'host': '192.168.1.255',
+        'user': 'redis',
+        'password': 'redis-password',
+        'db_range': [0, 32],
+        'primary': {'port': 6379, 'connection_max': 5000},
+        'secondary': {'port': 6380, 'connection_max': 4000}
+    }
+}
+>>> config["title"]
+'Config Example'
+>>> config["owner"]
+{
+    'name': 'Fabrizio Romano',
+    'dob': datetime.datetime(
+        1975, 12, 29, 11, 50, tzinfo=datetime.timezone.utc
+    )
+}
+>>> config["database"]["primary"]
+{'port': 6379, 'connection_max': 5000}
+>>> config["database"]["db_range"]
+[0, 32]

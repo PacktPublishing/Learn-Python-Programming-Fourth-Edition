@@ -1,0 +1,33 @@
+# objects.py
+
+# code block # 1
+>>> age = 42
+>>> age
+42
+>>> age = 43  #A
+>>> age
+43
+
+
+# code block # 2
+>>> age = 42
+>>> id(age)
+4377553168
+>>> age = 43
+>>> id(age)
+4377553200
+
+
+# code block # 3
+>>> numbers = set()
+>>> id(numbers)
+4368427136
+>>> numbers
+set()
+
+>>> numbers.add(3)
+>>> numbers.add(7)
+>>> id(numbers)
+4368427136
+>>> numbers
+{3, 7}

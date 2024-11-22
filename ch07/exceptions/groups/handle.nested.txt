@@ -1,0 +1,56 @@
+# exceptions/groups/handle.nested.txt
+>>> from util import validate_ages
+>>> try:
+...     validate_ages([24, -5, "ninety", 30, None])
+... except* TypeError as e:
+...     print("Invalid types")
+...     print(type(e), e)
+...     print(e.exceptions)
+... except* ValueError as e:
+...     print("Invalid values")
+...     print(type(e), e)
+...     print(e.exceptions)
+...
+Invalid types
+<class 'ExceptionGroup'> Validation errors (2 sub-exceptions)
+(TypeError('Not an integer: ninety'),
+ TypeError('Not an integer: None'))
+Invalid values
+<class 'ExceptionGroup'> Validation errors (1 sub-exception)
+(ValueError('Negative age: -5'),)
+
+>>> try:
+...     validate_ages([24, -5, "ninety", 30, None])
+... except* ValueError as e:
+...     print("Invalid values")
+...
+Invalid values
+  + Exception Group Traceback (most recent call last):
+  |   File "<stdin>", line 2, in <module>
+  |   File "exceptions/groups/util.py", line 20, in validate_ages
+  |     raise ExceptionGroup("Validation errors", errors)
+  | ExceptionGroup: Validation errors (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "exceptions/groups/util.py", line 15, in validate_ages
+    |     validate_age(age)
+    |   File "exceptions/groups/util.py", line 6, in validate_age
+    |     raise TypeError(f"Not an integer: {age}")
+    | TypeError: Not an integer: ninety
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "exceptions/groups/util.py", line 15, in validate_ages
+    |     validate_age(age)
+    |   File "exceptions/groups/util.py", line 6, in validate_age
+    |     raise TypeError(f"Not an integer: {age}")
+    | TypeError: Not an integer: None
+    +------------------------------------
+
+>>> try:
+...     raise RuntimeError("Ungrouped")
+... except* RuntimeError as e:
+...     print(type(e), e)
+...     print(e.exceptions)
+...
+<class 'ExceptionGroup'>  (1 sub-exception)
+(RuntimeError('Ungrouped'),)

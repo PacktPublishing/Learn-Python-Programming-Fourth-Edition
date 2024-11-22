@@ -1,0 +1,12 @@
+$ pytest tests
+====================== test session starts ======================
+platform darwin -- Python 3.12.2, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/fab/code/lpp4ed
+configfile: pyproject.toml
+collected 132 items
+
+tests/test_api.py ..............................................
+................................................................
+......................                                    [100%]
+
+====================== 132 passed in 0.14s ======================
