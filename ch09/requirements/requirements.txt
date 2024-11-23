@@ -4,11 +4,11 @@
 #
 #    pip-compile requirements.in
 #
-cffi==1.16.0
+cffi==1.17.1
     # via cryptography
-cryptography==42.0.7
+cryptography==43.0.3
     # via -r requirements.in
 pycparser==2.22
     # via cffi
-pyjwt==2.8.0
+pyjwt==2.10.0
     # via -r requirements.in
