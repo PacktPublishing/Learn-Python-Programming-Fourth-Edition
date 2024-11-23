@@ -6,13 +6,13 @@
 #
 iniconfig==2.0.0
     # via pytest
-marshmallow==3.21.1
+marshmallow==3.23.1
     # via -r requirements.in
-packaging==24.0
+packaging==24.2
     # via
     #   marshmallow
     #   pytest
-pluggy==1.4.0
+pluggy==1.5.0
     # via pytest
-pytest==8.1.1
+pytest==8.3.3
     # via -r requirements.in

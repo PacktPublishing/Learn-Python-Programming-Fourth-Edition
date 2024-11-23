@@ -4,17 +4,17 @@
 #
 #    pip-compile requirements.in
 #
-certifi==2024.2.2
+certifi==2024.8.30
     # via requests
-charset-normalizer==3.3.2
+charset-normalizer==3.4.0
     # via requests
-idna==3.6
+idna==3.10
     # via requests
-requests==2.31.0
+requests==2.32.3
     # via -r requirements.in
-sqlalchemy==2.0.29
+sqlalchemy==2.0.36
     # via -r requirements.in
-typing-extensions==4.10.0
+typing-extensions==4.12.2
     # via sqlalchemy
-urllib3==2.2.1
+urllib3==2.2.3
     # via requests

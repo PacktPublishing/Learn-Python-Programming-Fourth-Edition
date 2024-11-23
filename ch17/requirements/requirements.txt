@@ -4,7 +4,7 @@
 #
 #    pip-compile requirements.in
 #
-mypy==1.10.0
+mypy==1.13.0
     # via -r requirements.in
 mypy-extensions==1.0.0
     # via mypy

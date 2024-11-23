@@ -6,25 +6,25 @@
 #
 annotated-types==0.7.0
     # via pydantic
-certifi==2024.7.4
+certifi==2024.8.30
     # via requests
-charset-normalizer==3.3.2
+charset-normalizer==3.4.0
     # via requests
-dnspython==2.6.1
+dnspython==2.7.0
     # via email-validator
 email-validator==2.2.0
     # via pydantic
-idna==3.8
+idna==3.10
     # via
     #   email-validator
     #   requests
-pydantic[email]==2.8.2
+pydantic[email]==2.10.1
     # via
     #   -r requirements.in
     #   pydantic-settings
-pydantic-core==2.20.1
+pydantic-core==2.27.1
     # via pydantic
-pydantic-settings==2.4.0
+pydantic-settings==2.6.1
     # via -r requirements.in
 python-dotenv==1.0.1
     # via pydantic-settings
@@ -34,5 +34,5 @@ typing-extensions==4.12.2
     # via
     #   pydantic
     #   pydantic-core
-urllib3==2.2.2
+urllib3==2.2.3
     # via requests
