@@ -28,7 +28,7 @@ pydantic-settings==2.6.1
     # via -r requirements.in
 python-dotenv==1.0.1
     # via pydantic-settings
-requests==2.32.3
+requests==2.32.4
     # via -r requirements.in
 typing-extensions==4.12.2
     # via
