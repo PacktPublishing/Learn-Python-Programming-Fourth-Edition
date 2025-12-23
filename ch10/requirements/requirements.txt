@@ -6,7 +6,7 @@
 #
 iniconfig==2.0.0
     # via pytest
-marshmallow==3.23.1
+marshmallow==3.26.2
     # via -r requirements.in
 packaging==24.2
     # via
