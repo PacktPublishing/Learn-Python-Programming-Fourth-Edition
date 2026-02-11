@@ -8,11 +8,11 @@ annotated-types==0.7.0
     # via pydantic
 anyio==4.6.2.post1
     # via starlette
-cffi==1.17.1
+cffi==2.0.0
     # via cryptography
 click==8.1.7
     # via uvicorn
-cryptography==44.0.1
+cryptography==46.0.5
     # via pyjwt
 dnspython==2.7.0
     # via email-validator
