@@ -18,5 +18,5 @@ sqlalchemy==2.0.36
     # via -r requirements.in
 typing-extensions==4.12.2
     # via sqlalchemy
-urllib3==2.2.3
+urllib3==2.6.3
     # via requests
