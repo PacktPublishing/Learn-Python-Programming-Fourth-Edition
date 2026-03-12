@@ -4,7 +4,7 @@
 #
 #    pip-compile dev.in
 #
-black==24.10.0
+black==26.3.1
     # via -r dev.in
 click==8.1.7
     # via black
@@ -22,7 +22,7 @@ mypy-extensions==1.0.0
     #   mypy
 packaging==24.2
     # via black
-pathspec==0.12.1
+pathspec==1.0.4
     # via black
 platformdirs==4.3.6
     # via black
@@ -30,13 +30,15 @@ pycodestyle==2.12.1
     # via flake8
 pyflakes==3.2.0
     # via flake8
+pytokens==0.4.1
+    # via black
 types-requests==2.32.0.20241016
     # via -r dev.in
 typing-extensions==4.12.2
     # via
-    #   -c /Users/fab/code/lpp4ed/ch15/requirements/requirements.txt
+    #   -c requirements.txt
     #   mypy
 urllib3==2.2.3
     # via
-    #   -c /Users/fab/code/lpp4ed/ch15/requirements/requirements.txt
+    #   -c requirements.txt
     #   types-requests
