@@ -27,7 +27,7 @@ babel==2.16.0
     # via jupyterlab-server
 beautifulsoup4==4.12.3
     # via nbconvert
-black==24.10.0
+black==26.3.1
     # via -r dev.in
 bleach[css]==6.2.0
     # via nbconvert
@@ -170,7 +170,7 @@ pandocfilters==1.5.1
     # via nbconvert
 parso==0.8.4
     # via jedi
-pathspec==0.12.1
+pathspec==1.0.4
     # via black
 pdbpp==0.10.3
     # via -r dev.in
@@ -208,6 +208,8 @@ python-dateutil==2.9.0.post0
     #   jupyter-client
 python-json-logger==2.0.7
     # via jupyter-events
+pytokens==0.4.1
+    # via black
 pyyaml==6.0.2
     # via jupyter-events
 pyzmq==26.2.0
