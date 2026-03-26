@@ -8,11 +8,11 @@ black==24.10.0
     # via -r dev.in
 certifi==2024.8.30
     # via
-    #   -c /Users/fab/code/lpp4ed/ch16/requirements/requirements.txt
+    #   -c requirements.txt
     #   requests
 charset-normalizer==3.4.0
     # via
-    #   -c /Users/fab/code/lpp4ed/ch16/requirements/requirements.txt
+    #   -c requirements.txt
     #   requests
 click==8.1.7
     # via black
@@ -20,7 +20,7 @@ flake8==7.1.1
     # via -r dev.in
 idna==3.10
     # via
-    #   -c /Users/fab/code/lpp4ed/ch16/requirements/requirements.txt
+    #   -c requirements.txt
     #   requests
 iniconfig==2.0.0
     # via pytest
@@ -54,9 +54,9 @@ pytest==8.3.3
     #   pytest-mock
 pytest-mock==3.14.0
     # via -r dev.in
-requests==2.32.3
+requests==2.33.0
     # via
-    #   -c /Users/fab/code/lpp4ed/ch16/requirements/requirements.txt
+    #   -c requirements.txt
     #   requests-mock
 requests-mock==1.12.1
     # via -r dev.in
@@ -64,10 +64,10 @@ types-requests==2.32.0.20241016
     # via -r dev.in
 typing-extensions==4.12.2
     # via
-    #   -c /Users/fab/code/lpp4ed/ch16/requirements/requirements.txt
+    #   -c requirements.txt
     #   mypy
 urllib3==2.2.3
     # via
-    #   -c /Users/fab/code/lpp4ed/ch16/requirements/requirements.txt
+    #   -c requirements.txt
     #   requests
     #   types-requests
