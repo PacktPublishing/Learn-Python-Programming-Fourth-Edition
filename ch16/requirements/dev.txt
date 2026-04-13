@@ -48,7 +48,9 @@ pycodestyle==2.12.1
     # via flake8
 pyflakes==3.2.0
     # via flake8
-pytest==8.3.3
+pygments==2.20.0
+    # via pytest
+pytest==9.0.3
     # via
     #   -r dev.in
     #   pytest-mock
