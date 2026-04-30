@@ -138,13 +138,13 @@ jupyter-server==2.14.2
     #   notebook-shim
 jupyter-server-terminals==0.5.3
     # via jupyter-server
-jupyterlab==4.2.6
+jupyterlab==4.5.7
     # via
     #   -r requirements.in
     #   notebook
 jupyterlab-pygments==0.3.0
     # via nbconvert
-jupyterlab-server==2.27.3
+jupyterlab-server==2.28.0
     # via
     #   jupyterlab
     #   notebook
@@ -177,7 +177,7 @@ nbformat==5.10.4
     #   nbconvert
 nest-asyncio==1.6.0
     # via ipykernel
-notebook==7.2.2
+notebook==7.5.6
     # via -r requirements.in
 notebook-shim==0.2.4
     # via
