@@ -139,7 +139,7 @@ matplotlib-inline==0.1.7
     # via
     #   ipykernel
     #   ipython
-mistune==3.0.2
+mistune==3.2.1
     # via nbconvert
 mypy-extensions==1.0.0
     # via black
