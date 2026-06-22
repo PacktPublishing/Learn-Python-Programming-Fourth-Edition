@@ -125,11 +125,11 @@ jupyter-server==2.14.2
     #   notebook-shim
 jupyter-server-terminals==0.5.3
     # via jupyter-server
-jupyterlab==4.3.1
+jupyterlab==4.5.9
     # via -r dev.in
 jupyterlab-pygments==0.3.0
     # via nbconvert
-jupyterlab-server==2.27.3
+jupyterlab-server==2.28.0
     # via jupyterlab
 markupsafe==3.0.2
     # via
