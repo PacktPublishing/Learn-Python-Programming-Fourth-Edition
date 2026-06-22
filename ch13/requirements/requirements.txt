@@ -138,7 +138,7 @@ jupyter-server==2.20.0
     #   notebook-shim
 jupyter-server-terminals==0.5.3
     # via jupyter-server
-jupyterlab==4.5.7
+jupyterlab==4.5.9
     # via
     #   -r requirements.in
     #   notebook
