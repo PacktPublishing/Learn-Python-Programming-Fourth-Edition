@@ -6,7 +6,7 @@
 #
 annotated-types==0.7.0
     # via pydantic
-anyio==4.6.2.post1
+anyio==4.14.2
     # via starlette
 cffi==2.0.0
     # via cryptography
@@ -45,14 +45,13 @@ python-dotenv==1.2.2
     # via
     #   -r requirements.in
     #   pydantic-settings
-sniffio==1.3.1
-    # via anyio
 sqlalchemy==2.0.36
     # via -r requirements.in
 starlette==0.41.3
     # via fastapi
 typing-extensions==4.12.2
     # via
+    #   anyio
     #   fastapi
     #   pydantic
     #   pydantic-core
