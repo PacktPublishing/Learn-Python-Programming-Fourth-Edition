@@ -10,5 +10,5 @@ cryptography==48.0.1
     # via -r requirements.in
 pycparser==2.22
     # via cffi
-pyjwt==2.13.0
+pyjwt==2.15.0
     # via -r requirements.in
