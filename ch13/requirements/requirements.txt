@@ -111,6 +111,10 @@ jsonschema[format-nongpl]==4.23.0
     #   nbformat
 jsonschema-specifications==2024.10.1
     # via jsonschema
+jupyter-builder==1.2.3
+    # via
+    #   jupyterlab
+    #   notebook
 jupyter-client==8.6.3
     # via
     #   ipykernel
@@ -119,6 +123,7 @@ jupyter-client==8.6.3
 jupyter-core==5.7.2
     # via
     #   ipykernel
+    #   jupyter-builder
     #   jupyter-client
     #   jupyter-server
     #   jupyterlab
@@ -138,7 +143,7 @@ jupyter-server==2.20.0
     #   notebook-shim
 jupyter-server-terminals==0.5.3
     # via jupyter-server
-jupyterlab==4.5.10
+jupyterlab==4.6.4
     # via
     #   -r requirements.in
     #   notebook
@@ -177,7 +182,7 @@ nbformat==5.10.4
     #   nbconvert
 nest-asyncio==1.6.0
     # via ipykernel
-notebook==7.5.6
+notebook==7.6.3
     # via -r requirements.in
 notebook-shim==0.2.4
     # via
@@ -307,6 +312,7 @@ traitlets==5.14.3
     #   ipympl
     #   ipython
     #   ipywidgets
+    #   jupyter-builder
     #   jupyter-client
     #   jupyter-core
     #   jupyter-events
@@ -338,6 +344,3 @@ websocket-client==1.8.0
     # via jupyter-server
 widgetsnbextension==4.0.13
     # via ipywidgets
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools
