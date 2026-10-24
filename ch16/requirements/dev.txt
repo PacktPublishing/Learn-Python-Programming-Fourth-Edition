@@ -4,7 +4,7 @@
 #
 #    pip-compile dev.in
 #
-black==26.3.1
+black==26.10.1
     # via -r dev.in
 certifi==2024.8.30
     # via
@@ -70,7 +70,7 @@ typing-extensions==4.12.2
     # via
     #   -c requirements.txt
     #   mypy
-urllib3==2.2.3
+urllib3==2.6.3
     # via
     #   -c requirements.txt
     #   requests
