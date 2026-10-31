@@ -10,7 +10,7 @@ certifi==2024.8.30
     # via requests
 charset-normalizer==3.4.0
     # via requests
-dnspython==2.7.0
+dnspython==2.9.0
     # via email-validator
 email-validator==2.2.0
     # via pydantic
